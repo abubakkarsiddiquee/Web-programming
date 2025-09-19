@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantity: <input type="number" id="quantity"><br>
+    Home delivery: Yes <input type="radio" name="r" value="true" id="hm">No<input type="radio" name="r" value="false" ><br>
+    Address: <select id="address">
+        <option selected disabled hidden>Select Option</option>
+        <option value="dhaka">Dhaka</option>
+        <option value="chittagong">Chittagong</option>
+    </select><br>
+    Tip: <input type="number" id="tip"><br>
+    <button onclick="calculateBill()">Generate Bill</button><br>
+    Your total bill is <label id="bill"></label> BDT
+    
+</body>
+<script>
+    function calculateBill(){
+        let quantity = Number(document.getElementById('quantity').value);
+        let hm = document.getElementById('hm').checked;
+        let address = document.getElementById('address').value;
+        let tip = Number(document.getElementById('tip').value);
+        let base = quantity * 12.5;
+        if(quantity>=1 && quantity <= 9){
+            base = base * 0.9;
+        }
+        else if(quantity>=10 && quantity <= 19){
+            base = base * 0.85;
+        }
+        else if(quantity>=20){
+            base = base * 0.8;
+        }
+        if(hm){
+            base = base + 40;
+        }
+        if(address == "dhaka"){
+            base = base * 1.2;  
+        }
+        else{
+            base = base * 1.15;
+        }
+        if(tip>=1){
+            base = base + tip;
+        }
+        document.getElementById('bill').innerText = base;
+    }
+</script>
+</html>
