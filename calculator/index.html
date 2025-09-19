@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Num-1: <input type="text" id="txt1"><br>
+    Num-2: <input type="text" id="txt2"><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button><br>
+    Result: <label id="result"></label>
+
+    
+</body>
+<script>
+    function calculate(op){
+        let num1 = Number(document.getElementById('txt1').value);
+        let num2 = Number(document.getElementById('txt2').value);
+        let result;
+        if(op == '+'){
+            result = num1 + num2;
+        }
+        else if(op == '-'){
+            result = num1 - num2;
+        }
+        else if(op == '*'){
+            result = num1 * num2;
+        }
+        else if(op == '/'){
+            result = num1 / num2;
+        }
+        document.getElementById('result').innerText = result;
+
+    }
+
+</script>
+</html>
