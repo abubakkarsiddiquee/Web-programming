@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    width: 100vw;
+    height: 15vh;
+}
+#left{
+    width: 50vw;
+    height: 85vh;
+}
+#right{
+    width: 50vw;
+    height: 85vh;
+    background-image: url(dxf91zhqd2z6b0bwg85ktm5s4.svg);
+    background-position: 50px 50px;
+    background-repeat: no-repeat;
+}
+#parent{
+    display:flex;
+}
+#boro_text{
+    color:#526A6E;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#left_inside{
+    width: 550px;
+    height: 450px;
+    margin: 20px 0 0 200px;
+}
+#btn1,#btn2,#btn3{
+width: 400px;
+height:40px;
+border-radius: 25px;
+margin-bottom: 15px;
+font-size:14px;
+font-family: Arial, Helvetica, sans-serif;
+border: 1px solid black;
+}
+#btn1{
+    background-color: #5094ED;
+    color:white;
+
+}
